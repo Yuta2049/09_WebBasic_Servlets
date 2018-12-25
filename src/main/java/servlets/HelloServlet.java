@@ -1,5 +1,6 @@
-//package com.epam.rd;
+package servlets;//package com.epam.rd;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,5 +12,17 @@ public class HelloServlet extends HttpServlet {
             throws IOException {
         httpServletResponse.getWriter().print("Hello from servlet");
     }
+
+
+//    /**
+//     * Handles the HTTP POST method.
+//     * param request servlet request
+//     * param response servlet response
+//     */
+//    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+//            throws ServletException, IOException {
+//        processRequest(request, response);
+//    }
+
 
 }
