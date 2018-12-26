@@ -7,9 +7,9 @@ import java.util.List;
 
 public class ProductDAO {
 
-    List<Product> getAll() {
+    public List<Product> findAll() {
 
-        List<Product> products = new ArrayList<Product>();
+        List<Product> products = new ArrayList<>();
 
         products.add(new Product(0, "Elysium (Pandorum)", 1,300000, "elysium_pandorum.jpg"));
         products.add(new Product(0, "Death star (Star wars)", 1,300000, "death_star.jpg"));
@@ -34,7 +34,7 @@ public class ProductDAO {
         return products;
 }
 
-    Product findById(long id) {
+    public Product findById(long id) {
         return null;
     }
 
