@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/")
+//@WebServlet("/")
 public class ProductServlet extends HttpServlet {
 
     private ProductService productService = new ProductService();
@@ -39,7 +39,7 @@ public class ProductServlet extends HttpServlet {
 
         //req.getSession().setAttribute("products", products);
 
-        getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
+        //getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
 
         //req.getRequestDispatcher("login.jsp").forward(req, resp);
 
@@ -47,9 +47,14 @@ public class ProductServlet extends HttpServlet {
         ServletContext selvletContext = getServletContext();
         selvletContext.setAttribute("products", products);
 
+        //getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
+        //getServletContext().getRequestDispatcher("").forward(req, resp);
         getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
 
 
     }
+
+
+
 
 }

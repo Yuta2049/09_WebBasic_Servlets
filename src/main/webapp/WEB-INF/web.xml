@@ -26,6 +26,8 @@
         <url-pattern>/servlet</url-pattern>
     </servlet-mapping>
 
+
+
     <servlet>
         <servlet-name>ProductServlet</servlet-name>
         <!--<servlet-class>org.mycompany.myname.HelloServlet</servlet-class>-->
@@ -34,8 +36,9 @@
 
     <servlet-mapping>
         <servlet-name>ProductServlet</servlet-name>
-        <url-pattern>/products</url-pattern>
+        <url-pattern></url-pattern>
     </servlet-mapping>
+
 
 
     <servlet>
@@ -59,6 +62,8 @@
         <!--<filter-name>hiddenHttpMethodFilter</filter-name>-->
         <!--<servlet-name>UserSimpleServlet</servlet-name>-->
     <!--</filter-mapping>-->
+
+
 
 
 </web-app>

@@ -10,7 +10,7 @@
 
     <title>Интернет-магазин "АВРОРА". Самый большой выбор звездолетов и планетарных станций в 9 вселенных. В наличии и под заказ</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 
@@ -72,7 +72,7 @@
 
 <a href="products">Click here to see servlet Products</a>
 
-1111
+
 
     <table>
         <c:forEach items="${products}" var="product">
