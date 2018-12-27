@@ -16,16 +16,11 @@
 
     <script type="text/javascript" src="js/products.js"></script>
 
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <script type="text/javascript" src="js/users.js"></script>
 
-    <script>
-        $(function () {
-            $("#header").load("header.jsp");
-        });
-        $(function () {
-            $("#footer").load("footer.jsp");
-        });
-    </script>
+    <%-- <script> loginUser('${user.userName}'); </script> --%>
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
 
 </head>
 
@@ -116,66 +111,6 @@
                 </ul>
             </c:forEach>
 
-
-<%--
-                var mainDiv = document.getElementById('main');
-
-                //productsDiv.insertAdjacentHTML('beforeEnd', text);
-                mainDiv.insertAdjacentHTML('beforeEnd', textCat);
-
-                var filteredProducts = $.grep(products, function (n, ind) {
-                    return (n.category == iCat);
-                });
-
-                for (var i in filteredProducts) {
-
-                    //var text = '<li class="product" id="b' + iCat + i + '" onclick="openTab3(\'b' + iCat + i + '\', \'c' + iCat + i + '\');">';
-                    var text = '<li class="product" id="a' + iCat + i + '">';
-
-                    //text += '<div class="visibleSection">';
-                    text += '<div class="visibleSection" id="b' + iCat + i + '"onclick="showHiddenTab(\'a' + iCat + i + '\', \'b' + iCat + i + '\', \'c' + iCat + i + '\');">';
-
-
-                    text += '<div class="image">';
-                    text += '<img src="images/' + filteredProducts[i].image + '">';
-                    text += '</div>';
-                    text += '<div class="productName">';
-                    text += filteredProducts[i].name;
-                    text += '</div>';
-                    text += '</div>';
-                    //text += '<div id="c1" class="hiddenSection">';
-                    text += '<div class="hiddenSection" id="c' + iCat + i + '" onclick="hideHiddenTab(\'a' + iCat + i + '\', \'b' + iCat + i + '\', \'c' + iCat + i + '\');">';
-
-                    text += '<div class="image">';
-                    text += '<img src="images/' + filteredProducts[i].image + '">';
-                    text += '</div>';
-
-                    text += '<div class="productName">';
-                    text += filteredProducts[i].name;
-                    text += '</div>';
-                    text += '<div class="price">';
-                    text += filteredProducts[i].price;
-                    text += '</div>';
-
-                    text += '<button class="add">Да, я хочу этот корабль!</button>';
-
-                    text += '</div>';
-                    text += '</li>';
-
-                    var productsDiv = document.getElementById('category' + iCat);
-                    productsDiv.insertAdjacentHTML('beforeEnd', text);
-
-                }
-
-                textCat = '</ul>';
-
-                main.insertAdjacentHTML('beforeEnd', textCat);*/
-
-            }
-        </script>
-        --%>
-
-
     </div>
 
 	<div id="footer">
@@ -192,8 +127,6 @@
     <script type="text/javascript" src="js/cart.js"></script>
 
     <script type="text/javascript" src="js/search.js"></script>
-
-    <script type="text/javascript" src="js/users.js"></script>
 
 </body>
 
