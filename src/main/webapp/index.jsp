@@ -79,36 +79,35 @@
             <tr>
                 <td>${product.name}</td>
                 <td>${product.price}</td>
+                <td>${product.category}</td>
             </tr>
         </c:forEach>
     </table>
 
 
+            <c:forEach items="${categories}" var="category">
 
-        <%--
-        <script type="text/javascript">
+                <div class="category">
+                    <H2>${category.name}</H2>
+                    <H2>${category.id}</H2>
+                <hr>
+                </div>
 
-            var products = generateProducts();
 
-            for (iCat = 1; iCat < 4; iCat++) {
+                <ul class="products">
 
-                var textCat = '<div class="category">';
-                switch (iCat) {
-                    case 1:
-                        textCat += '<H2>Планетарные станции и корабли поколений</H2>';
-                        break;
-                    case 2:
-                        textCat += '<H2>Звездолеты среднего размера</H2>';
-                        break;
-                    case 3:
-                        textCat += '<H2>Малые звездолеты</H2>';
-                }
 
-                textCat += '<hr>';
-                textCat += '</div>';
+                <c:forEach items="${products}" var="product">
 
-                textCat += '<ul id="category' + iCat + '" class="products">';
+                    <c:if test="${category.id==product.category}">
 
+                    <div class="productName">
+                    ${product.name}
+                    </div>
+
+                    </c:if>
+
+<%--
                 var mainDiv = document.getElementById('main');
 
                 //productsDiv.insertAdjacentHTML('beforeEnd', text);
@@ -160,10 +159,14 @@
 
                 textCat = '</ul>';
 
-                main.insertAdjacentHTML('beforeEnd', textCat);
+                main.insertAdjacentHTML('beforeEnd', textCat);*/
 
             }
-        </script> --%>
+        </script>
+        --%>
+        </c:forEach>
+        </ul>
+        </c:forEach>
 
     </div>
 
