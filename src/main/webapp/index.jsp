@@ -66,46 +66,56 @@
             </div>
         </div>
 
-<h2>Hello World!</h2>
-
-<a href="servlet">Click here to see servlet</a>
-
-<a href="products">Click here to see servlet Products</a>
-
-
-
-    <table>
-        <c:forEach items="${products}" var="product">
-            <tr>
-                <td>${product.name}</td>
-                <td>${product.price}</td>
-                <td>${product.category}</td>
-            </tr>
-        </c:forEach>
-    </table>
-
-
             <c:forEach items="${categories}" var="category">
 
                 <div class="category">
                     <H2>${category.name}</H2>
-                    <H2>${category.id}</H2>
-                <hr>
+                    <hr>
                 </div>
 
 
                 <ul class="products">
 
-
                 <c:forEach items="${products}" var="product">
 
                     <c:if test="${category.id==product.category}">
 
-                    <div class="productName">
-                    ${product.name}
-                    </div>
+                        <li class="product" id="a${category.id}${product.id}">
 
+                            <div class="visibleSection" id="b${category.id}${product.id}" onclick="showHiddenTab('a${category.id}${product.id}', 'b${category.id}${product.id}', 'c${category.id}${product.id}');">
+
+                                <div class="image">
+                                    <img src="images/${product.image}">
+                                </div>
+
+
+                                <div class="productName">
+                                    ${product.name}
+                                </div>
+                            </div>
+
+                            <div class="hiddenSection" id="c${category.id}${product.id}" onclick="hideHiddenTab('a${category.id}${product.id}', 'b${category.id}${product.id}', 'c${category.id}${product.id}');">
+
+                                <div class="image">
+                                    <img src="images/${product.image}">
+                                </div>
+
+
+                                <div class="price">
+                                    ${product.price}
+                                </div>
+
+                                <button class="add">Да, я хочу этот корабль!</button>
+
+                            </div>
+
+                        </li>
                     </c:if>
+
+                </c:forEach>
+                </ul>
+            </c:forEach>
+
 
 <%--
                 var mainDiv = document.getElementById('main');
@@ -164,9 +174,7 @@
             }
         </script>
         --%>
-        </c:forEach>
-        </ul>
-        </c:forEach>
+
 
     </div>
 
