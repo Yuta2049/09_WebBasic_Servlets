@@ -19,6 +19,8 @@
         });
     </script>
 
+    <script type="text/javascript" src="js/users.js"></script>
+
 </head>
 
 <body>
@@ -39,7 +41,8 @@
         </form>
         --%>
 
-         <form action = "/users" method="post">
+         <%-- <form action = "/login.jsp" method="post"> --%>
+         <form method="post">
             <input type="button" class="button" value="Вход" onClick="checkLoginAuthorization();">
             <input required type="text" name="login" placeholder="Логин">
             <input required type="text" name="password" placeholder="Пароль">
@@ -48,26 +51,31 @@
         </form>
 
 
-        <a href="registration.html">Зарегистрироваться</a>
+        <script>
+            loginUser('${user.userName}');
+        </script>
 
-        Наш найденный пользователь:
+        <a href="/registration.jsp">Зарегистрироваться</a>
 
-        <table>
+        <b>${errorMessage}</b>
+
+        <%--<table>
         <tr>
                     <td>${user.userName}</td>
                     <td>${user.userSurname}</td>
                     <td>${user.login}</td>
                     <td>${user.password}</td>
                     </tr>
-                    </table>
-
+                    </table> --%>
 
     </div>
 
     <div id="footer">
     </div>
 
+<%--
     <script type="text/javascript" src="js/users.js"></script>
+    --%>
 
     <script type="text/javascript" src="js/cart.js"></script>
 
