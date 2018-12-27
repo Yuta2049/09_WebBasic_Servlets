@@ -1,6 +1,5 @@
 package servlets;
 
-import model.Product;
 import model.User;
 import service.UserService;
 

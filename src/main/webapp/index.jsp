@@ -73,37 +73,16 @@
 <a href="products">Click here to see servlet Products</a>
 
 1111
-<table>
-    <c:forEach items="${products}" var="product">
-        <tr>
-            <td>${product.getName}</td>
-            <td>${product.getPrice}</td>
-        </tr>
-    </c:forEach>
+
+    <table>
+        <c:forEach items="${products}" var="product">
+            <tr>
+                <td>${product.name}</td>
+                <td>${product.price}</td>
+            </tr>
+        </c:forEach>
     </table>
 
-22222
-
-<table>
-    <c:forEach var="productIterator" items="${products}">
-        <tr>
-            <td>${productIterator.name}</td>
-            <td>${productIterator.getName}</td>
-            <td>${productIterator.price}</td>
-        </tr>
-    </c:forEach>
-</table>
-
-3333
-
-<table>
-   <c:forEach items="${products}" var = "product">
-        <tr>
-            <td>${product.name}</td>
-            <td>${product.getName()}</td>
-            </tr>
-            </c:forEach>
-            </table>
 
 
         <%--
