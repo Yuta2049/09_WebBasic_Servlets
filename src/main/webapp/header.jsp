@@ -4,23 +4,24 @@
 
 <ul id="menu">
     <li>
-        <a href="index.jsp"><img src="images/Aurora_logo.png" style="width: 180px;"></a>
+        <a href="/"><img src="images/Aurora_logo.png" style="width: 180px;"></a>
     </li>
-    <li id="login">
-        <a href="login.jsp">Авторизация</a>
-    </li>
-    <li id="userName"></li>
-    <li id="logout">
-        <a href="login.jsp">Выход</a>
-    </li>
+    <c:if test="${userName == null || userName == ''}">
+        <li id="login">
+            <a href="login">Авторизация</a>
+        </li>
+    </c:if>
+    <c:if test="${userName != null && userName!= ''}">
+        <li id="userName">${userName}</li>
+        <li id="logout">
+            <a href="logout">Выход</a>
+        </li>
+    </c:if>
     <li id="registration">
         <a href="registration.jsp">Регистрация</a>
     </li>
 </ul>
 
-<script>
-    setMenuItemsVisibility();
-</script>
 
 <div id="cart-container">
     <img src="images/spa-constellation@3x.png" style="width:40px; height: 40px;">

@@ -10,14 +10,6 @@
     <title>Авторизация</title>
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script>
-        $(function () {
-            $("#header").load("header.jsp");
-        });
-        $(function () {
-            $("#footer").load("footer.jsp");
-        });
-    </script>
 
     <script type="text/javascript" src="js/users.js"></script>
 
@@ -30,52 +22,28 @@
 
     <div class="middle">
         <H1>Авторизация</H1>
-        <%--
-        <form>
-            <label>Логин:</label>
-            <input class="login" required><br />
-            <label>Пароль:</label>
-            <input type="password" class="password" required>
-            <br />
-            <input type="button" class="button" value="Вход" onClick="checkLoginAuthorization();">
-        </form>
-        --%>
 
-         <%-- <form action = "/login.jsp" method="post"> --%>
          <form method="post">
-            <input type="button" class="button" value="Вход" onClick="checkLoginAuthorization();">
+            <%-- <input type="button" class="button" value="Вход" onClick="checkLoginAuthorization();"> --%>
+
+            <label>Логин:</label>
             <input required type="text" name="login" placeholder="Логин">
-            <input required type="text" name="password" placeholder="Пароль">
-            <%-- <input type="submit" value="Сохранить"> --%>
-            <input type="submit" value="Найти">
+            <br />
+
+            <label>Пароль:</label>
+            <input required type="text" name="password" placeholder="Пароль"><br />
+
+            <input type="submit" value="Вход">
         </form>
-
-
-        <script>
-            loginUser('${user.userName}');
-        </script>
 
         <a href="/registration.jsp">Зарегистрироваться</a>
 
-        <b>${errorMessage}</b>
-
-        <%--<table>
-        <tr>
-                    <td>${user.userName}</td>
-                    <td>${user.userSurname}</td>
-                    <td>${user.login}</td>
-                    <td>${user.password}</td>
-                    </tr>
-                    </table> --%>
+        <b style="color: red">${errorMessage}</b>
 
     </div>
 
     <div id="footer">
     </div>
-
-<%--
-    <script type="text/javascript" src="js/users.js"></script>
-    --%>
 
     <script type="text/javascript" src="js/cart.js"></script>
 

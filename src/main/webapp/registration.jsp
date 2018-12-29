@@ -9,14 +9,6 @@
 	<title>Регистрация</title>
 	<link rel="stylesheet" href="css/style.css">
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<script>
-		$(function () {
-			$("#header").load("header.jsp");
-		});
-        $(function () {
-            $("#footer").load("footer.jsp");
-        });
-	</script>
 </head>
 
 <body>
