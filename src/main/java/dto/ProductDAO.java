@@ -34,8 +34,4 @@ public class ProductDAO {
         return products;
 }
 
-    public Product findById(long id) {
-        return null;
-    }
-
 }

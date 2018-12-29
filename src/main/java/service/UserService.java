@@ -15,10 +15,6 @@ public class UserService {
         return userDAO.findAll();
     }
 
-//    public User findByLogin(String login) {
-//        return userDAO.findByLogin(login);
-//    }
-
     public User findByLoginAndPassword(String login, String password) {
         return userDAO.findByLoginAndPassword(login, password);
     }

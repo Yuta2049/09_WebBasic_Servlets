@@ -15,5 +15,4 @@ public class CategoryService {
         return productDAO.findAll();
     }
 
-
 }

@@ -24,7 +24,6 @@
         <H1>Авторизация</H1>
 
          <form method="post">
-            <%-- <input type="button" class="button" value="Вход" onClick="checkLoginAuthorization();"> --%>
 
             <label>Логин:</label>
             <input required type="text" name="login" placeholder="Логин">

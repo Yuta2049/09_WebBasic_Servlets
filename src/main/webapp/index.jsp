@@ -18,8 +18,6 @@
 
     <script type="text/javascript" src="js/users.js"></script>
 
-    <%-- <script> loginUser('${user.userName}'); </script> --%>
-
     <link rel="shortcut icon" href="images/favicon.ico" />
 
 </head>
